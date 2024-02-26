@@ -92,17 +92,33 @@ ansible --version
 - ***cfssl and cfssljson:*** Follow the instructions on the GitHub page.
 ```bash
 curl -s -L -o /usr/local/bin/cfssl https://github.com/cloudflare/cfssl/releases/download/v1.6.1/cfssl_1.6.1_linux_amd64
+```
+```bash
 curl -s -L -o /usr/local/bin/cfssljson https://github.com/cloudflare/cfssl/releases/download/v1.6.1/cfssljson_1.6.1_linux_amd64
+```
+```bash
 chmod +x /usr/local/bin/cfssl /usr/local/bin/cfssljson
+```
+```bash
 cfssl version
 ```
 - ***Kubernetes CLI:*** Install and Set Up kubectl
 ```bash
 VERSION=$(curl -s https://storage.googleapis.com/kubernetes-release/release/v1.3.10
+```
+```bash
 curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.3.10/bin/linux/amd64/kubectl
+```
+```bash
 chmod +x ./kubectl
+```
+```bash
 sudo mv ./kubectl /usr/local/bin/kubectl
+```
+```bash
 kubectl version --client
+```
+```bash
 kubectl version 
 ```
 
