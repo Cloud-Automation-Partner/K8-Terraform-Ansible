@@ -22,22 +22,25 @@ Before starting, ensure you have the following tools installed on your control m
 Install requirementes by following the below steps  
 
 ```bash
-  
 sudo yum Install awscli -y
+```
+```bash
 yum Install awscli -y
+```
+```bash
 yum update
+```
+```bash
 aws configure
+```
+```bash
 sudo yum Install git -y
-sudo yum install git -y
+```
+```bash
 yum install awscli -y
+```
+```bash
 git --version
-sudo yum install -y yum-utils
-sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
-sudo yum -y install terraform
-terraform -help
-sudo amazon-linux-extras install epel -y
-sudo yum install ansible -y
-ansible --version
 ```
 ## Requirements:  
 
@@ -63,9 +66,15 @@ sudo yum -y install terraform
 ```bash
 terraform -help
 ```
-- ***Jinja2:*** Install Python and use pip to install required modules: pip install jinja2 netaddr
+- ***Jinja2:*** Install Python and use pip to install required modules:
 ```bash
-pip3 install jinja2 netaddr
+sudo yum update -y
+```
+```bash
+sudo yum install python3 -y
+```
+```bash
+pip3 install jinja2 netaddr boto boto3
 ```
 - ***Ansible:*** Install Ansible
 ```bash
