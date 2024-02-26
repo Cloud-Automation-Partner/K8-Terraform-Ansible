@@ -89,8 +89,22 @@ sudo yum install ansible -y
 ```bash
 ansible --version
 ```
-- ***cfssl and cfssljson:*** Follow the instructions on the GitHub page.  
-- ***Kubernetes CLI:*** Install and Set Up kubectl  
+- ***cfssl and cfssljson:*** Follow the instructions on the GitHub page.
+```bash
+curl -s -L -o /usr/local/bin/cfssl https://github.com/cloudflare/cfssl/releases/download/v1.6.1/cfssl_1.6.1_linux_amd64
+curl -s -L -o /usr/local/bin/cfssljson https://github.com/cloudflare/cfssl/releases/download/v1.6.1/cfssljson_1.6.1_linux_amd64
+chmod +x /usr/local/bin/cfssl /usr/local/bin/cfssljson
+cfssl version
+```
+- ***Kubernetes CLI:*** Install and Set Up kubectl
+```bash
+VERSION=$(curl -s https://storage.googleapis.com/kubernetes-release/release/v1.3.10
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.3.10/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+kubectl version --client
+kubectl version 
+```
 
 
 ## AWS Setup:
