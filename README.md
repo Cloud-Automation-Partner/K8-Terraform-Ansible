@@ -19,10 +19,10 @@ This guide provides a detailed walkthrough for provisioning a Kubernetes cluster
 
 Before starting, ensure you have the following tools installed on your control machine:
 
-## Terraform:  
+Install requirementes by following the below steps  
 
 ```bash
-Install Terraform by following the below steps  
+  
 sudo yum Install awscli -y
 yum Install awscli -y
 yum update
@@ -41,18 +41,32 @@ ansible --version
 ```
 ## Requirements:  
 
-***Python:*** Version 2.7.12 or newer is recommended. Ensure you have the Jinja2 (2.8) and netaddr modules installed.  
-***Ansible:*** Version 2.1.0.0 or newer is required for the automation scripts.  
-cfssl and cfssljson: These tools from CloudFlare are required for certificate generation. Download and installation instructions can be found at Cloudflare's GitHub repository.  
-***Kubernetes CLI (kubectl):*** Needed to interact with the Kubernetes cluster.  
-***SSH Agent:*** Used for managing SSH keys and connections.  
-***AWS CLI (optional):*** Useful for managing AWS resources directly.  
-Installation Guides  
-***Terraform:*** Install Terraform  
-***Jinja2:*** Install Python and use pip to install required modules: pip install jinja2 netaddr   
-***Ansible:*** Install Ansible  
-***cfssl and cfssljson:*** Follow the instructions on the GitHub page.  
-***Kubernetes CLI:*** Install and Set Up kubectl  
+- ***Python:*** Version 2.7.12 or newer is recommended. Ensure you have the Jinja2 (2.8) and netaddr modules installed.  
+- ***Ansible:*** Version 2.1.0.0 or newer is required for the automation scripts.  
+- ***cfssl and cfssljson:*** These tools from CloudFlare are required for certificate generation. Download and installation instructions can be found at Cloudflare's GitHub repository.  
+- ***Kubernetes CLI (kubectl):*** Needed to interact with the Kubernetes cluster.  
+- ***SSH Agent:*** Used for managing SSH keys and connections.  
+- ***AWS CLI (optional):*** Useful for managing AWS resources directly.
+  
+## Installation Guides    
+
+- ***Terraform:*** Install Terraform
+  ```bash
+  sudo yum install -y yum-utils
+  sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+  sudo yum -y install terraform
+  terraform -help
+  ```
+- ***Jinja2:*** Install Python and use pip to install required modules: pip install jinja2 netaddr   
+- ***Ansible:*** Install Ansible
+```bash
+sudo yum update -y
+sudo amazon-linux-extras install epel -y
+sudo yum install ansible -y
+ansible --version
+```
+- ***cfssl and cfssljson:*** Follow the instructions on the GitHub page.  
+- ***Kubernetes CLI:*** Install and Set Up kubectl  
 
 
 ## AWS Setup:
