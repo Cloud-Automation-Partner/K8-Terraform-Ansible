@@ -1,7 +1,7 @@
 
 # Setting Up a Kubernetes Cluster on AWS with Terraform and Ansible  
 
-This guide provides a detailed walkthrough for provisioning a Kubernetes cluster on AWS using Terraform and Ansible, inspired by the approach in Kubernetes the hard way. This setup is intended for educational purposes and is not recommended for production environments.
+This guide provides a detailed walkthrough for provisioning a Kubernetes cluster on AWS using Terraform and Ansible
 
 ## Goals:  
 
@@ -130,7 +130,7 @@ owner = "YourName"
 ### AWS Region Configuration
 To change the AWS region from the default (eu-west-1), set the region, zone, and default_ami variables in your Terraform configuration. Also, adjust the Ansible hosts/ec2.ini file to match your chosen region.
 
-### Provisioning with Terraform
+## Provisioning with Terraform
 Navigate to the ./terraform directory and execute:
 
 ```bash
@@ -150,7 +150,7 @@ Outputs:
 
 You will need them later (you may show them at any moment with `terraform output`).
 
-### Generated SSH config
+## Generated SSH config
 
 Terraform generates `ssh.cfg`, SSH configuration file in the project directory.
 It is convenient for manually SSH into machines using node names (`controller0`...`controller2`, `etcd0`...`2`, `worker0`...`2`), but it is NOT used by Ansible.
@@ -160,7 +160,7 @@ e.g.
 $ ssh -F ssh.cfg worker0
 ```
 
-### Kubernetes Setup with Ansible
+## Kubernetes Setup with Ansible
 Move to the ./ansible directory to start the Kubernetes setup.
 
 ### Cluster Installation
