@@ -51,18 +51,33 @@ ansible --version
 ## Installation Guides    
 
 - ***Terraform:*** Install Terraform
-  ```bash
-  sudo yum install -y yum-utils
-  sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
-  sudo yum -y install terraform
-  terraform -help
-  ```
-- ***Jinja2:*** Install Python and use pip to install required modules: pip install jinja2 netaddr   
+```bash
+sudo yum install -y yum-utils
+```
+```bash
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+```
+```bash
+sudo yum -y install terraform
+```
+```bash
+terraform -help
+```
+- ***Jinja2:*** Install Python and use pip to install required modules: pip install jinja2 netaddr
+```bash
+pip3 install jinja2 netaddr
+```
 - ***Ansible:*** Install Ansible
 ```bash
 sudo yum update -y
+```
+```bash
 sudo amazon-linux-extras install epel -y
+```
+```bash
 sudo yum install ansible -y
+```
+```bash
 ansible --version
 ```
 - ***cfssl and cfssljson:*** Follow the instructions on the GitHub page.  
