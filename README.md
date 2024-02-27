@@ -22,22 +22,16 @@ Before starting, ensure you have the following tools installed on your control m
 Install requirementes by following the below steps  
 
 ```bash
-sudo yum Install awscli -y
-```
-```bash
-yum Install awscli -y
-```
-```bash
 yum update
+```
+```bash
+sudo yum Install awscli -y
 ```
 ```bash
 aws configure
 ```
 ```bash
 sudo yum Install git -y
-```
-```bash
-yum install awscli -y
 ```
 ```bash
 git --version
@@ -158,12 +152,14 @@ owner = "YourName"
   
 
 ### AWS Region Configuration
-To change the AWS region from the default (eu-west-1), set the region, zone, and default_ami variables in your Terraform configuration. Also, adjust the Ansible hosts/ec2.ini file to match your chosen region.
+To change the AWS region from the default (us-east-1), set the region, zone, and default_ami variables in your Terraform configuration. Also, adjust the Ansible hosts/ec2.ini file to match your chosen region.
 
 ## Provisioning with Terraform
 Navigate to the ./terraform directory and execute:
 
 ```bash
+terraform init
+terraform fmt
 terraform plan
 terraform apply
 ```
