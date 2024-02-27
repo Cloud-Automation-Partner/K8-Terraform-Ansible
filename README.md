@@ -160,6 +160,7 @@ Navigate to the ./terraform directory and execute:
 ```bash
 terraform init
 terraform fmt
+terraform validate
 terraform plan
 terraform apply
 ```
